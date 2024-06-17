@@ -1,3 +1,14 @@
+body {
+    background: linear-gradient(
+        to top,
+        rgb(21, 24, 34) 0%,
+        rgba(62, 66, 104, 0.9) 50%,
+        rgb(17, 15, 29) 100%
+    );
+}
+
+body
+
 .screen-saver {
     height: 95vh;
     max-width: 1920px;
@@ -20,20 +31,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 .screen-saver-container img {
-    width: 64px;
+    width: 92px;
 }
 
 /* TYPOGRAPHY */
 
+.purchase-price-board {
+    font-family: "Tahoma", sans-serif;
+    color: rgb(247, 147, 26);
+    font-size: 20px;
+}
+
 .purchase-price-board p {
-    line-height: 1em;
+    font-family: "Tahoma", sans-serif;
+    line-height: 1;
+}
+
+.prices span {
+    color: white;
+    font-weight: normal;
 }
 
 .screen-saver-container h1 {
     text-align: center;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: rgb(247, 147, 26);
 }
 
-/*  */
+.screen-saver-container p {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+/* ------------- */

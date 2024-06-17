@@ -8,15 +8,15 @@ const ScreenSaver = () => {
                 <p>Купи:</p>
                 <ul className="prices">
                     <li>
-                        <span>1 BTC = </span> 100000 BGN
+                        1 BTC = <span>100000 BGN</span>
                     </li>
                     <li>
-                        <span>1 ETH = </span> 9000 BGN
+                        1 ETH = <span>9000 BGN</span>
                     </li>
                 </ul>
             </article>
             <article className="screen-saver-container">
-                <img src="vite.svg" />
+                <img src="btc-logo.svg" />
                 <div className="screen-saver-heading">
                     <h1>Купи Биткойни</h1>
                     <p>Докоснете екрана за да започнете</p>
