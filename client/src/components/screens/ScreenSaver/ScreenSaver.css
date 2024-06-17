@@ -1,0 +1,39 @@
+.screen-saver {
+    height: 95vh;
+    max-width: 1920px;
+    display: flex;
+    justify-content: center;
+}
+
+.purchase-price-board {
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding: 1em;
+}
+
+.prices {
+    margin-left: 0.5em;
+}
+
+.screen-saver-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-saver-container img {
+    width: 64px;
+}
+
+/* TYPOGRAPHY */
+
+.purchase-price-board p {
+    line-height: 1em;
+}
+
+.screen-saver-container h1 {
+    text-align: center;
+}
+
+/*  */

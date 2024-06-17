@@ -1,6 +1,7 @@
 import React from "react";
-import { Router, Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import ScreenSaver from "./components/screens/ScreenSaver/ScreenSaver";
+import "../styles/style.css";
 
 const App = () => {
     return (
