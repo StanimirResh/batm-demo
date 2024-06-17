@@ -1,14 +1,11 @@
-body {
+.screenSaver {
     background: linear-gradient(
         to top,
         rgb(21, 24, 34) 0%,
         rgba(62, 66, 104, 0.9) 50%,
         rgb(17, 15, 29) 100%
     );
-}
-
-.screenSaver {
-    height: 95vh;
+    height: 100vh;
     max-width: 1920px;
     display: flex;
     justify-content: center;
@@ -45,7 +42,6 @@ body {
 }
 
 .purchasePriceBoard p {
-    font-family: "Tahoma", sans-serif;
     line-height: 1;
 }
 

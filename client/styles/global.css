@@ -2,10 +2,6 @@ html {
     cursor: url("touch-cursor-up.png") 38 38, auto;
 }
 
-body {
-    padding: 1em;
-}
-
 html:active {
     cursor: url("touch-cursor-down.png") 38 38, auto;
 }
