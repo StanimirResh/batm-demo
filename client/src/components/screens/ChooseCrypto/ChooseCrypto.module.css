@@ -1,4 +1,84 @@
 .chooseCryptoScreen {
-    background-color: rgb(247, 147, 26);
+    background-color: rgb(255, 171, 68);
     height: 100vh;
+}
+
+.languageContainer {
+    padding: 1em;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.languageContainer img {
+    width: 72px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.chooseCryptoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 75vh;
+}
+
+.chooseCryptoHeadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.logo {
+    width: 72px;
+}
+
+.supportedCoins {
+    display: flex;
+    gap: 2em;
+}
+
+.coinImg {
+    width: 180px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 0.8rem rgb(105, 51, 0));
+    padding: 0.5em;
+}
+
+.chooseCryptoHelp {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.chooseCryptoHelp p {
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+/* TYPOGRAPHY */
+
+.chooseCryptoHeading {
+    color: white;
+}
+
+.chooseCryptoHeading p {
+    font-size: 1em;
+}
+
+.chooseCryptoHeading h3 {
+    font-size: 2em;
+}
+
+.supportedCoins {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+.chooseCryptoHelp p {
+    background-color: rgb(100, 69, 187);
+    color: white;
 }
