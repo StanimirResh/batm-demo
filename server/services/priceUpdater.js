@@ -14,21 +14,33 @@ const fetchLatestPrices = async () => {
         const conversionRate = conversionResponse.data.rates.EUR;
 
         for (const coinSymbol of coinsOfInterest) {
-            // Fetch the latest price for the coin from Binance
-            const response = await axios.get(
-                `https://api.binance.com/api/v3/ticker/price?symbol=${coinSymbol}USDT`
-            );
-            const priceInUSD = parseFloat(response.data.price);
-            const priceInEUR = (priceInUSD * conversionRate).toFixed(2);
+            let priceInEUR;
 
-            // Update the database with the latest price
+            if (coinSymbol === "USDT") {
+                // Special case for USDT
+                const response = await axios.get(
+                    "https://api.binance.com/api/v3/ticker/price?symbol=EURUSDT"
+                );
+                const priceInUSD = parseFloat(response.data.price);
+                priceInEUR = (1 / priceInUSD).toFixed(3); // Convert the price to EUR
+            } else {
+                // General case for other coins
+                const response = await axios.get(
+                    `https://api.binance.com/api/v3/ticker/price?symbol=${coinSymbol}USDT`
+                );
+                const priceInUSD = parseFloat(response.data.price);
+                priceInEUR = (priceInUSD * conversionRate).toFixed(2);
+            }
+
             await Coin.findOneAndUpdate(
                 { symbol: coinSymbol },
                 { price: priceInEUR },
                 { new: true, upsert: true }
             );
 
-            console.log(`Updated ${coinSymbol} to ${priceInEUR} EUR`);
+            console.log(
+                `Updated ${coinSymbol} to ${priceInEUR} EUR`
+            );
         }
 
         console.log("Prices updated successfully");
