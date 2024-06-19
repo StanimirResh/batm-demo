@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const scheduleTasks = require("./cron/schdeule.js");
 
 dotenv.config();
 
@@ -17,7 +18,10 @@ app.use(bodyParser.json());
 // MongoDB connection
 mongoose
     .connect(process.env.MONGO_URI)
-    .then(() => console.log("MongoDB connected..."))
+    .then(() => {
+        console.log("MongoDB connected...");
+        scheduleTasks();
+    })
     .catch((err) => console.log(err));
 
 // Define routes
