@@ -1,26 +1,25 @@
-// server/routes/items.js
 const express = require('express');
 const router = express.Router();
-const Item = require('../models/Item');
+const Coin = require('../models/Coin');
 
-// Get all items
+// Get all coins
 router.get('/', async (req, res) => {
   try {
-    const items = await Item.find();
-    res.json(items);
+    const coins = await Coin.find();
+    res.json(coins);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 });
 
-// Add a new item
+// Add a new coin
 router.post('/', async (req, res) => {
-  const newItem = new Item({
+  const newCoin = new Coin({
     name: req.body.name,
   });
   try {
-    const item = await newItem.save();
-    res.status(201).json(item);
+    const coin = await newCoin.save();
+    res.status(201).json(coin);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
