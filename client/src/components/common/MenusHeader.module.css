@@ -1,0 +1,35 @@
+.languageContainer {
+    padding: 1em;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.languageContainer img {
+    width: 72px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.chooseCryptoHeadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.logo {
+    width: 72px;
+}
+
+.chooseCryptoHeading {
+    color: white;
+}
+
+.chooseCryptoHeading p {
+    font-size: 1em;
+}
+
+.chooseCryptoHeading h3 {
+    font-size: 2em;
+}
