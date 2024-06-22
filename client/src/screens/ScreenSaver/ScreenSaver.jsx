@@ -1,25 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ScreenSaver.module.css";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 const ScreenSaver = () => {
+    const [coins, setCoins] = useState([]);
     const navigate = useNavigate();
 
     const handleClick = () => {
         navigate("choose-crypto");
     };
 
+    useEffect(() => {
+        const fetchCoins = async () => {
+            try {
+                const response = await axios.get("/api/coins");
+                setCoins(response.data);
+            } catch (error) {
+                console.error("Error fetching coins data:", error);
+            }
+        };
+
+        fetchCoins();
+    }, []);
+
     return (
         <div className={styles.screenSaver} onClick={handleClick}>
             <article className={styles.purchasePriceBoard}>
                 <p>Купи:</p>
                 <ul className={styles.prices}>
-                    <li>
-                        1 BTC = <span>100000 BGN</span>
-                    </li>
-                    <li>
-                        1 ETH = <span>9000 BGN</span>
-                    </li>
+                    {coins.map((coin) => (
+                        <li key={coin.symbol}>
+                            1 {coin.symbol} = <span>{coin.price} EUR</span>
+                        </li>
+                    ))}
                 </ul>
             </article>
             <article className={styles.screenSaverContainer}>
