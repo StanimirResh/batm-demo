@@ -1,7 +1,27 @@
-html {
-    cursor: url("touch-cursor-up.png") 38 38, auto;
+html,
+body,
+* {
+    cursor: url("touch-cursor-up.png") 38 38, auto !important;
 }
 
-html:active {
-    cursor: url("touch-cursor-down.png") 38 38, auto;
+html:active,
+body:active,
+*:active {
+    cursor: url("touch-cursor-down.png") 38 38, auto !important;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    cursor: url("touch-cursor-up.png") 38 38, auto !important;
+}
+
+input:active,
+textarea:active,
+button:active,
+select:active,
+a:active {
+    cursor: url("touch-cursor-down.png") 38 38, auto !important;
 }
