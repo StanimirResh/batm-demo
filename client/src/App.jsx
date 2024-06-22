@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
-import ScreenSaver from "./components/screens/ScreenSaver/ScreenSaver";
-import ChooseCrypto from "./components/screens/ChooseCrypto/ChooseCrypto";
-import MainMenu from "./components/screens/MainMenu/MainMenu";
+import ScreenSaver from "./screens/ScreenSaver/ScreenSaver";
+import ChooseCrypto from "./screens/ChooseCrypto/ChooseCrypto";
+import MainMenu from "./screens/MainMenu/MainMenu";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 import "../styles/style.css";
 
@@ -13,7 +14,14 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<ScreenSaver />} />
                 <Route path="/choose-crypto" element={<ChooseCrypto />} />
-                <Route path="/main-menu" element={<MainMenu />} />
+                <Route
+                    path="/main-menu"
+                    element={
+                        <ProtectedRoute>
+                            <MainMenu />
+                        </ProtectedRoute>
+                    }
+                />
             </Routes>
         </BrowserRouter>
     );

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./ChooseCrypto.module.css";
-import MenusHeader from "../../common/MenusHeader";
 import { useNavigate } from "react-router-dom";
+import MenusHeader from "../../components/common/MenusHeader";
 
 const ChooseCrypto = () => {
     const [coins, setCoins] = useState([]);
     const navigate = useNavigate();
-    
     useEffect(() => {
         const fetchCoins = async () => {
             try {
