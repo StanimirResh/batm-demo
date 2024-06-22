@@ -1,3 +1,10 @@
+.menusHeader {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .languageContainer {
     padding: 1em;
     display: flex;

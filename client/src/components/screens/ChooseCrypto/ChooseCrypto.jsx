@@ -26,7 +26,7 @@ const ChooseCrypto = () => {
                     <div key={coin.symbol}>
                         <img
                             src={`${coin.symbol.toLowerCase()}-logo.svg`}
-                            alt=""
+                            alt="coin-logo"
                             className={styles.coinImg}
                         />
                         <p>1 {coin.symbol}</p>

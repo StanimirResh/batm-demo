@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./MenusHeader.module.css"
+import styles from "./MenusHeader.module.css";
 
 const MenusHeader = () => {
     return (
-        <>
+        <div className={styles.menusHeader}>
             <section className={styles.languageContainer}>
                 <img src="bulgaria-flag.svg" alt="" />
                 <img src="uk-flag.svg" alt="" />
@@ -19,7 +19,7 @@ const MenusHeader = () => {
                     <h3>Купи Биткойни!</h3>
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 
