@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import styles from "./ChooseCrypto.module.css";
 import { useNavigate } from "react-router-dom";
-import MenusHeader from "../../components/common/MenusHeader";
+import MenusHeader from "../../components/MenusHeader/MenusHeader";
 import { AppContext } from "../../contexts/AppContext";
 
 const ChooseCrypto = () => {

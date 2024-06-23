@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import MenusHeader from "../../components/common/MenusHeader";
+import MenusHeader from "../../components/MenusHeader/MenusHeader";
 import styles from "./MainMenu.module.css";
 import { useNavigate } from "react-router";
 import { AppContext } from "../../contexts/AppContext";

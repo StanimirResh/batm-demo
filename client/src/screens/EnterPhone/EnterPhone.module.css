@@ -36,34 +36,7 @@
     outline: none;
 }
 
-.numpad {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.numpadButton {
-    background-color: #3498db;
-    border: none;
-    border-radius: 0.5em;
-    padding: 1em 2em;
-    transition: background-color 0.3s ease;
-}
-
-.numpadButton:hover {
-    background-color: #2980b9;
-}
-
-.okButton {
-    background-color: #2cb866;
-    border: none;
-    border-radius: 0.5em;
-}
-
-.okButton:hover {
-    background-color: #27ae60;
-}
 
 .cancelButton {
     background-color: #e74c3c;
@@ -92,10 +65,6 @@
     color: white;
 }
 
-.numpadButton {
-    color: white;
-    font-size: 1.5em;
-}
 
 .phoneNumber {
     font-size: 3em;
