@@ -18,7 +18,14 @@ const App = () => {
                     <Route path="/" element={<ScreenSaver />} />
                     <Route path="/choose-crypto" element={<ChooseCrypto />} />
                     <Route path="/main-menu" element={<MainMenu />} />
-                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route
+                        path="/privacy-policy"
+                        element={
+                            <ProtectedRoute>
+                                <PrivacyPolicy />
+                            </ProtectedRoute>
+                        }
+                    />
                 </Routes>
             </BrowserRouter>
         </AppProvider>

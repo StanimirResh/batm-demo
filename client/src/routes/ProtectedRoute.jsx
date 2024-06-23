@@ -1,12 +1,11 @@
-import React from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import React, { useContext } from "react";
+import { Navigate } from "react-router-dom";
+import { AppContext } from "../contexts/AppContext";
 
 const ProtectedRoute = ({ children }) => {
-    const location = useLocation();
-    const coin = location.state?.coin;
+    const { coin, action } = useContext(AppContext);
 
-    if (!coin) {
-        // If no coin is selected, redirect to the home page
+    if (!coin || !action) {
         return <Navigate to="/" replace />;
     }
 
