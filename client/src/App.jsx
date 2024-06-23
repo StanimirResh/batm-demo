@@ -5,6 +5,7 @@ import ScreenSaver from "./screens/ScreenSaver/ScreenSaver";
 import ChooseCrypto from "./screens/ChooseCrypto/ChooseCrypto";
 import MainMenu from "./screens/MainMenu/MainMenu";
 import ProtectedRoute from "./routes/ProtectedRoute";
+import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
 
 import "../styles/style.css";
 
@@ -22,6 +23,7 @@ const App = () => {
                         </ProtectedRoute>
                     }
                 />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
         </BrowserRouter>
     );
