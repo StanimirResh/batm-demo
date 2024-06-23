@@ -42,7 +42,7 @@ const ChooseCrypto = () => {
                             className={styles.coinImg}
                         />
                         <p>1 {coin.symbol}</p>
-                        <p>{coin.price} BGN</p>
+                        <p>{coin.price} EUR</p>
                     </div>
                 ))}
             </section>

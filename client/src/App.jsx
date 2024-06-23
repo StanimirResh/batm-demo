@@ -7,6 +7,8 @@ import MainMenu from "./screens/MainMenu/MainMenu";
 import EnterPhone from "./screens/EnterPhone/EnterPhone";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
+import EnterOtp from "./screens/EnterOtp/EnterOtp";
+
 import { AppProvider } from "./contexts/AppContext";
 
 import "../styles/style.css";
@@ -32,6 +34,14 @@ const App = () => {
                         element={
                             <ProtectedRoute>
                                 <EnterPhone />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/enter-otp"
+                        element={
+                            <ProtectedRoute>
+                                <EnterOtp />
                             </ProtectedRoute>
                         }
                     />

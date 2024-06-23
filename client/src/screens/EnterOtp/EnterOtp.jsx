@@ -1,10 +1,10 @@
 import React, { useEffect, useContext, useState } from "react";
-import styles from "./EnterPhone.module.css";
+import styles from "./EnterOtp.module.css";
 import { useNavigate } from "react-router";
 import { AppContext } from "../../contexts/AppContext";
 import Numpad from "../../components/Numpad/Numpad";
 
-const EnterPhone = () => {
+const EnterOtp = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
     const { coin } = useContext(AppContext);
     const navigate = useNavigate();
@@ -20,16 +20,15 @@ const EnterPhone = () => {
     }
 
     const handleConfirmClick = () => {
-        navigate("/enter-otp");
+        navigate("/next-screen");
     };
 
     return (
-        <div className={styles.enterPhoneScreen}>
-            <section className={styles.enterPhoneHeaderContainer}>
-                <h1 className={styles.enterPhoneHeader}>Телефонен номер</h1>
-                <p className={styles.enterPhoneInstructions}>
-                    Моля, въведете Вашия мобилен номер, на който да Ви изпратим
-                    SMS с еднократна парола:
+        <div className={styles.enterOtpScreen}>
+            <section className={styles.enterOtpHeaderContainer}>
+                <h1 className={styles.enterOtpHeader}>Еднократна парола</h1>
+                <p className={styles.enterOtpInstructions}>
+                    Моля, въведете еднократната парола, изпратена Ви чрез SMS:
                 </p>
             </section>
             <input
@@ -54,4 +53,4 @@ const EnterPhone = () => {
     );
 };
 
-export default EnterPhone;
+export default EnterOtp;
