@@ -1,16 +1,21 @@
+/* Numpad.module.css */
 .numpad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 1em;
 }
 
 .numpadButton {
     background-color: #3498db;
     border: none;
     border-radius: 0.5em;
+    color: white;
+    font-size: 1.5em;
     padding: 1em 2em;
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 120px;
+    height: 80px;
 }
 
 .numpadButton:hover {
@@ -18,16 +23,11 @@
 }
 
 .okButton {
-    background-color: #2cb866;
+    background-color: #2ecc71;
     border: none;
     border-radius: 0.5em;
 }
 
 .okButton:hover {
     background-color: #27ae60;
-}
-
-.numpadButton {
-    color: white;
-    font-size: 1.5em;
 }

@@ -1,0 +1,61 @@
+/* InputScreen.module.css */
+.inputScreen {
+    background-color: rgb(255, 171, 68);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+    height: 100vh;
+    gap: 2em;
+}
+
+.inputHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.inputHeader {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.inputInstructions {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.inputValue {
+    background: none;
+    border: none;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    color: white;
+    width: 1ch;
+    transition: width 0.3s;
+}
+
+.inputValue:focus {
+    outline: none;
+}
+
+.cancelButton {
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cancelButton:hover {
+    background-color: #c0392b;
+}

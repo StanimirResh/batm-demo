@@ -1,55 +1,28 @@
-import React, { useEffect, useContext, useState } from "react";
-import styles from "./EnterOtp.module.css";
+import React, { act, useContext } from "react";
+import InputScreen from "../../components/common/InputScreen/InputScreen";
 import { useNavigate } from "react-router";
 import { AppContext } from "../../contexts/AppContext";
-import Numpad from "../../components/Numpad/Numpad";
 
 const EnterOtp = () => {
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const { coin } = useContext(AppContext);
+    const { action } = useContext(AppContext);
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (!coin) {
-            navigate("/");
-        }
-    }, [coin, navigate]);
-
-    if (!coin) {
-        return null;
-    }
-
     const handleConfirmClick = () => {
-        navigate("/next-screen");
+        if (action == "buy") {
+            navigate("/scan-qr");
+        } else if (action == "sell") {
+            
+        }
     };
 
     return (
-        <div className={styles.enterOtpScreen}>
-            <section className={styles.enterOtpHeaderContainer}>
-                <h1 className={styles.enterOtpHeader}>Еднократна парола</h1>
-                <p className={styles.enterOtpInstructions}>
-                    Моля, въведете еднократната парола, изпратена Ви чрез SMS:
-                </p>
-            </section>
-            <input
-                className={styles.phoneNumber}
-                type="text"
-                readOnly={true}
-                value={phoneNumber}
-                style={{ width: `${phoneNumber.length + 3}ch` }}
-            ></input>
-            <Numpad
-                phoneNumber={phoneNumber}
-                setPhoneNumber={setPhoneNumber}
-                handleConfirmClick={handleConfirmClick}
-            />
-            <button
-                className={styles.cancelButton}
-                onClick={() => navigate(-1)}
-            >
-                ОТКАЗ
-            </button>
-        </div>
+        <InputScreen
+            headerText="Еднократна парола"
+            instructionsText="Моля, въведете еднократната парола, изпратена Ви чрез SMS:"
+            onConfirm={handleConfirmClick}
+            inputLength={3}
+            customButtons={[1, 2, 3, 4, 5, 6, 7, 8, 9, "⇦", `0`, "OK"]}
+        />
     );
 };
 
