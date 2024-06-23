@@ -26,7 +26,6 @@
 .phoneNumber {
     background: none;
     border: none;
-    font-size: 3em;
     letter-spacing: 0.1em;
     color: white;
     width: 1ch;
@@ -48,10 +47,7 @@
     background-color: #3498db;
     border: none;
     border-radius: 0.5em;
-    color: white;
-    font-size: 1.5em;
     padding: 1em 2em;
-    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -73,10 +69,7 @@
     background-color: #e74c3c;
     border: none;
     border-radius: 0.5em;
-    color: white;
     padding: 1em 2em;
-    cursor: pointer;
-    font-size: 1.2em;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -91,4 +84,20 @@
 
 .enterPhoneHeader {
     font-size: 2em;
+    text-transform: uppercase;
+}
+
+.cancelButton {
+    font-size: 1.2em;
+    color: white;
+}
+
+.numpadButton {
+    color: white;
+    font-size: 1.5em;
+}
+
+.phoneNumber {
+    font-size: 3em;
+    color: white;
 }
