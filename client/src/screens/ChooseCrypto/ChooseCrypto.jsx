@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import styles from "./ChooseCrypto.module.css";
 import { useNavigate } from "react-router-dom";
 import MenusHeader from "../../components/common/MenusHeader";
+import { AppContext } from "../../contexts/AppContext";
 
 const ChooseCrypto = () => {
     const [coins, setCoins] = useState([]);
     const navigate = useNavigate();
+    const { setCoin } = useContext(AppContext);
+
     useEffect(() => {
         const fetchCoins = async () => {
             try {
@@ -20,16 +23,19 @@ const ChooseCrypto = () => {
         fetchCoins();
     }, []);
 
-    const handleOnClick = (coin) => {
-        navigate(`/main-menu`, { state: { coin } });
+    const handleCoinClick = (coin) => {
+        setCoin(coin);
+        navigate("/main-menu");
     };
-
     return (
         <div className={styles.chooseCryptoScreen}>
             <MenusHeader />
             <section className={styles.supportedCoins}>
                 {coins.map((coin) => (
-                    <div key={coin.symbol} onClick={() => handleOnClick(coin)}>
+                    <div
+                        key={coin.symbol}
+                        onClick={() => handleCoinClick(coin)}
+                    >
                         <img
                             src={`${coin.symbol.toLowerCase()}-logo.svg`}
                             alt="coin-logo"

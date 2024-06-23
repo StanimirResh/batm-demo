@@ -1,10 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import styles from "./PrivacyPolicy.module.css";
+import { useNavigate } from "react-router";
+import { AppContext } from "../../contexts/AppContext";
 
 const ScreenSaver = () => {
+    const navigate = useNavigate();
+    const { coin, action } = useContext(AppContext);
+
+    useEffect(() => {
+        if (!coin || !action) {
+            navigate("/");
+        }
+    }, [coin, action, navigate]);
+
+    if (!coin || !action) {
+        return null;
+    }
+
+    const handleContinue = () => {
+        navigate("/enter-phone");
+    };
     return (
         <div className={styles.privacyPolicyScreen}>
-            <h1 className={styles.privacyPolicyHeader}>Политика за поверителност</h1>
+            <h1 className={styles.privacyPolicyHeader}>
+                Политика за поверителност
+            </h1>
             <div className={styles.privacyPolicyBox}>
                 <p>
                     Молим ви да потвърдите телефонния си номер. Нужен ни е само
@@ -14,8 +34,15 @@ const ScreenSaver = () => {
                 </p>
             </div>
             <div className={styles.privacyPolicyButtons}>
-                <button className={styles.privacyPolicyContinue}>Продължи</button>
-                <button className={styles.privacyPolicyCancel}>Отказ</button>
+                <button className={styles.privacyPolicyContinue}>
+                    Продължи
+                </button>
+                <button
+                    className={styles.privacyPolicyCancel}
+                    onClick={() => navigate(-1)}
+                >
+                    Отказ
+                </button>
             </div>
         </div>
     );

@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import MenusHeader from "../../components/common/MenusHeader";
 import styles from "./MainMenu.module.css";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
+import { AppContext } from "../../contexts/AppContext";
+
 const MainMenu = () => {
-    const location = useLocation();
     const navigate = useNavigate();
-    const coin = location.state?.coin;
+    const { coin, setAction } = useContext(AppContext);
 
     useEffect(() => {
         if (!coin) {
@@ -14,24 +15,38 @@ const MainMenu = () => {
     }, [coin, navigate]);
 
     if (!coin) {
-        return null; // Optionally, render a loading spinner or a message
+        return null;
     }
+
+    const handleNavigate = (actionType) => {
+        setAction(actionType);
+        navigate("/privacy-policy");
+    };
 
     return (
         <div className={styles.MainMenuScreen}>
             <MenusHeader />
             <section className={styles.MainMenuButtonsWrapper}>
                 {coin.canPurchase && (
-                    <button className={styles.MainMenuButton}>
+                    <button
+                        className={styles.MainMenuButton}
+                        onClick={() => handleNavigate("buy")}
+                    >
                         <p>Покупка</p>
                     </button>
                 )}
                 {coin.canSell && (
                     <>
-                        <button className={styles.MainMenuButton}>
+                        <button
+                            className={styles.MainMenuButton}
+                            onClick={() => handleNavigate("sell")}
+                        >
                             <p>Продажба</p>
                         </button>
-                        <button className={styles.MainMenuButton}>
+                        <button
+                            className={styles.MainMenuButton}
+                            onClick={() => handleNavigate("payout")}
+                        >
                             <p>Талон за изплащане</p>
                         </button>
                     </>
