@@ -8,6 +8,7 @@ import EnterPhone from "./screens/EnterPhone/EnterPhone";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
 import EnterOtp from "./screens/EnterOtp/EnterOtp";
+import ScanQr from "./screens/ScanQr/ScanQr";
 
 import { AppProvider } from "./contexts/AppContext";
 
@@ -42,6 +43,14 @@ const App = () => {
                         element={
                             <ProtectedRoute>
                                 <EnterOtp />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/scan-qr"
+                        element={
+                            <ProtectedRoute>
+                                <ScanQr />
                             </ProtectedRoute>
                         }
                     />

@@ -1,0 +1,98 @@
+.atmScreen {
+    background-color: rgb(255, 171, 68);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.atm {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.atmHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bitcoinLogo {
+    width: 50px;
+    height: 50px;
+}
+
+.atmBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instruction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.instruction h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.instruction p {
+    margin: 0;
+}
+
+.cancelButton {
+    background-color: rgb(236, 79, 74);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.preview {
+    background-color: green;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.previewHeader {
+    background-color: green;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.previewImage {
+    width: 100%;
+    height: auto;
+}
+
+.instructions {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.walletButton {
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
