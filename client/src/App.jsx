@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import ScreenSaver from "./screens/ScreenSaver/ScreenSaver";
 import ChooseCrypto from "./screens/ChooseCrypto/ChooseCrypto";
 import MainMenu from "./screens/MainMenu/MainMenu";
+import EnterPhone from "./screens/EnterPhone/EnterPhone";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
 import { AppProvider } from "./contexts/AppContext";
@@ -23,6 +24,14 @@ const App = () => {
                         element={
                             <ProtectedRoute>
                                 <PrivacyPolicy />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/enter-phone"
+                        element={
+                            <ProtectedRoute>
+                                <EnterPhone />
                             </ProtectedRoute>
                         }
                     />

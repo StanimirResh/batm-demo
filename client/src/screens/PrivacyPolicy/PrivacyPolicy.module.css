@@ -48,14 +48,15 @@
     color: white;
     font-size: 2.5em;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .privacyPolicyBox p {
-    font-size: 1.6em;
+    font-size: 1.5em;
 }
 
 .privacyPolicyButtons > button {
     text-transform: uppercase;
     color: white;
-    font-size: 18px;
+    font-size: 1.2em;
 }

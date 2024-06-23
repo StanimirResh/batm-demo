@@ -34,7 +34,10 @@ const ScreenSaver = () => {
                 </p>
             </div>
             <div className={styles.privacyPolicyButtons}>
-                <button className={styles.privacyPolicyContinue}>
+                <button
+                    className={styles.privacyPolicyContinue}
+                    onClick={handleContinue}
+                >
                     Продължи
                 </button>
                 <button

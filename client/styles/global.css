@@ -2,6 +2,8 @@ html,
 body,
 * {
     cursor: url("touch-cursor-up.png") 38 38, auto !important;
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
 html:active,
