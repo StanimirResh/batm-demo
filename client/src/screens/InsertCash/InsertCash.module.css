@@ -1,0 +1,23 @@
+.insertCashScreen {
+    background-color: rgb(255, 171, 68);
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.insertHeadingContainer {
+    padding: 2em;
+}
+
+.insertHeadingContainer h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.insertHeadingContainer p {
+    text-align: center;
+    font-size: 18px;
+}
