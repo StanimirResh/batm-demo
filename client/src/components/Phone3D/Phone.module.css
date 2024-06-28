@@ -22,6 +22,17 @@
     top: 200px;
     overflow: hidden;
     color: black;
+    animation: 3s slidein;
+}
+
+@keyframes slidein {
+    from {
+        left: -200px;
+    }
+
+    to {
+        left: 100px;
+    }
 }
 
 .phone img {
@@ -32,7 +43,6 @@
     text-align: center;
     font-size: 14px;
 }
-
 
 .phoneShade {
     position: absolute;
