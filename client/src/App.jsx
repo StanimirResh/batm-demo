@@ -46,14 +46,7 @@ const App = () => {
                             </ProtectedRoute>
                         }
                     />
-                    <Route
-                        path="/scan-qr"
-                        element={
-                            <ProtectedRoute>
-                                <ScanQr />
-                            </ProtectedRoute>
-                        }
-                    />
+                    <Route path="/scan-qr" element={<ScanQr />} />
                 </Routes>
             </BrowserRouter>
         </AppProvider>

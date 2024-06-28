@@ -1,4 +1,4 @@
-import React, { act, useContext } from "react";
+import React, { useContext } from "react";
 import InputScreen from "../../components/common/InputScreen/InputScreen";
 import { useNavigate } from "react-router";
 import { AppContext } from "../../contexts/AppContext";

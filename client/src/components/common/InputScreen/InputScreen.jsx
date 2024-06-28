@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import Numpad from "../../Numpad/Numpad";
 import { AppContext } from "../../../contexts/AppContext";
 import styles from "./InputScreen.module.css";
+import CancelButton from "../CancelButton/CancelButton";
 
 const InputScreen = ({
     headerText,
@@ -44,12 +45,7 @@ const InputScreen = ({
                 handleConfirmClick={onConfirm}
                 customButtons={customButtons}
             />
-            <button
-                className={styles.cancelButton}
-                onClick={() => navigate(-1)}
-            >
-                ОТКАЗ
-            </button>
+            <CancelButton sticky={true} />
         </div>
     );
 };
