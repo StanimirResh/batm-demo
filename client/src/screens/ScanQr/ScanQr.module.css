@@ -3,31 +3,21 @@
     height: 100vh;
     color: white;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .qrHeadingContainer {
-    display: flex;
-    flex-direction: column;
     padding: 2em;
-}
-
-.cancelButton {
-    background-color: #e74c3c;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
 }
 
 .qrRightMenu {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-self: flex-end;
+    align-items: end;
     padding: 20px;
+    max-width: 30vw;
+    justify-content: space-between;
 }
 
 .qrPreviewContainer {
@@ -37,7 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0.5em 0.5em 0.5em ;
+    padding: 0 0.5em 0.5em 0.5em;
 }
 
 .qrPreviewContainer p {
