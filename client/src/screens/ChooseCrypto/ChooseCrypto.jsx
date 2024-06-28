@@ -4,6 +4,7 @@ import styles from "./ChooseCrypto.module.css";
 import { useNavigate } from "react-router-dom";
 import MenusHeader from "../../components/MenusHeader/MenusHeader";
 import { AppContext } from "../../contexts/AppContext";
+import HelpText from "../../components/common/HelpText/HelpText"
 
 const ChooseCrypto = () => {
     const [coins, setCoins] = useState([]);
@@ -46,9 +47,7 @@ const ChooseCrypto = () => {
                     </div>
                 ))}
             </section>
-            <section className={styles.chooseCryptoHelp}>
-                <p>За да продължите докоснете съответната монетна икона</p>
-            </section>
+            <HelpText text="За да продължите докоснете съответната монетна икона"/>
         </div>
     );
 };

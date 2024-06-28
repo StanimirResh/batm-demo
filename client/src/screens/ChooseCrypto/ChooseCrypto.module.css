@@ -19,26 +19,10 @@
     padding: 0.5em;
 }
 
-.chooseCryptoHelp {
-    margin: 1em;
-    display: flex;
-    justify-content: center;
-}
-
-.chooseCryptoHelp p {
-    padding: 0.5em 1em;
-    border-radius: 1em;
-}
-
 /* TYPOGRAPHY */
 
 .supportedCoins {
     text-align: center;
     color: white;
     font-size: 1.2em;
-}
-
-.chooseCryptoHelp p {
-    background-color: rgb(100, 69, 187);
-    color: white;
 }
