@@ -17,21 +17,19 @@
     width: 226px;
     background: var(--darkBlueGray);
     border-radius: 50px;
-    position: absolute;
-    left: 100px;
-    top: 200px;
+    position: relative;
     overflow: hidden;
     color: black;
-    animation: 3s slidein;
+    animation: 5s slidein;
 }
 
 @keyframes slidein {
     from {
-        left: -200px;
+        translate: -500px;
     }
 
     to {
-        left: 100px;
+        translate: 0;
     }
 }
 

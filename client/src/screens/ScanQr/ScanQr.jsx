@@ -1,4 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router";
+
 import styles from "./ScanQr.module.css";
 
 import { AppContext } from "../../contexts/AppContext";
@@ -8,6 +10,21 @@ import Phone from "../../components/Phone3D/Phone";
 
 const ScanQr = () => {
     const { coin, action } = useContext(AppContext);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!coin || !action) {
+            navigate("/");
+        }
+    }, [coin, navigate]);
+
+    if (!coin || !action) {
+        return null;
+    }
+
+    const handleCoinClick = () => {
+        navigate("/insert-cash");
+    };
 
     return (
         <>
@@ -27,7 +44,9 @@ const ScanQr = () => {
                     />
                 </div>
                 <CancelButton sticky={true} />
-                <Phone />
+                <div className={styles.phoneWrapper} onClick={handleCoinClick}>
+                    <Phone />
+                </div>
             </div>
         </>
     );

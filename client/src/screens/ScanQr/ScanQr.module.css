@@ -41,6 +41,12 @@
     border-radius: 1em;
 }
 
+.phoneWrapper {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+}
+
 .qrHeadingContainer h1 {
     font-size: 32px;
     text-transform: uppercase;
