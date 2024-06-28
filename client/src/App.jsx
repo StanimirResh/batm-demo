@@ -13,6 +13,7 @@ import ScanQr from "./screens/ScanQr/ScanQr";
 import { AppProvider } from "./contexts/AppContext";
 
 import "../styles/style.css";
+import InsertCash from "./screens/InsertCash/InsertCash";
 
 const App = () => {
     return (
@@ -54,6 +55,7 @@ const App = () => {
                             </ProtectedRoute>
                         }
                     />
+                    <Route path="/insert-cash" element={<InsertCash />} />
                 </Routes>
             </BrowserRouter>
         </AppProvider>
